@@ -1,0 +1,376 @@
+/* --- Global Styles & Variables --- */
+:root {
+  --background-color: #000000;
+  --text-color: #FFFFFF;
+  --primary-font: 'Inter', sans-serif;
+  --transition-speed: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  font-size: 16px;
+  overflow: hidden; /* Hide scrollbars during transitions/loading */
+  width: 100vw;
+  height: 100vh;
+}
+
+body, a, button {
+  cursor: none;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+/* --- Custom Cursor --- */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor.hover {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+}
+
+/* --- Preloader --- */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  opacity: 1;
+  transition: opacity var(--transition-speed) ease-in-out;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader-text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  animation: fadeInOut 2s infinite alternate;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+/* --- Main App Layout --- */
+.app-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+/* --- Header/Nav --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.header-logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav a {
+  margin-left: 2rem;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--text-color);
+  transition: width 0.3s ease;
+}
+
+.nav a.active::after,
+.nav a:hover::after {
+  width: 100%;
+}
+
+
+/* --- Page Container & Transitions --- */
+.page-container {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation-duration: var(--transition-speed);
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.page-enter {
+  animation-name: slideInFromBottom;
+}
+
+.page-exit {
+  animation-name: slideOutToTop;
+}
+
+@keyframes slideInFromBottom {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideOutToTop {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+
+
+/* --- Home Page Grid --- */
+.home-grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.grid-item {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+}
+
+.intro {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  justify-content: center;
+}
+
+.intro h1 {
+  font-size: 5vw;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.tech-stack {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.projects {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  position: relative;
+}
+
+.grid-item h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+}
+
+.tech-stack ul {
+  list-style: none;
+}
+
+.tech-stack li {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.projects ul {
+  list-style: none;
+}
+
+.project-item a {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: transform 0.3s ease;
+}
+
+.project-item a:hover {
+  transform: translateX(10px);
+}
+
+.project-image-preview {
+  position: absolute;
+  top: 50%;
+  right: 5rem;
+  transform: translate(0, -50%) scale(0.9);
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: -1;
+}
+
+.project-image-preview.visible {
+  opacity: 1;
+  transform: translate(0, -50%) scale(1);
+}
+
+/* --- About Page --- */
+.about-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-picture {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+
+/* --- Footer --- */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.social-links a {
+  margin: 0 1.5rem;
+}
+
+.social-links svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover svg {
+  transform: scale(1.2);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+  .app-container {
+    padding: 1rem;
+  }
+  .home-grid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .intro h1 {
+    font-size: 10vw;
+  }
+  .project-item a {
+    font-size: 1.5rem;
+  }
+  .project-image-preview {
+    display: none;
+  }
+  .about-page {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    height: auto;
+    padding: 2rem 0;
+  }
+  .profile-picture {
+    width: 150px;
+    height: 210px;
+  }
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav a {
+    margin: 0 1rem;
+  }
+}
