@@ -17,10 +17,10 @@ export const NavigationProvider = ({ children }: { children: ReactNode }) => {
     const setPage = (newPage: string) => {
         if (newPage !== page && !isTransitioning) {
             setPrevPage(page);
+            setPageState(newPage);
             setIsTransitioning(true);
-            // CSS 애니메이션 시간과 일치시킵니다.
+            // Match CSS animation duration to end the transition state
             setTimeout(() => {
-                setPageState(newPage);
                 setIsTransitioning(false);
             }, 500); 
         }

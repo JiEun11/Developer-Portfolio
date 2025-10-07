@@ -22,7 +22,7 @@ const PageTransition = () => {
                 </div>
             )}
             {PageToRender && (
-                 <div className={`page ${!isTransitioning ? 'page-enter' : ''}`} key={page}>
+                 <div className="page page-enter" key={page}>
                     <PageToRender />
                 </div>
             )}
