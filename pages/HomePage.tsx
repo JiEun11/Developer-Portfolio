@@ -24,7 +24,8 @@ const HomePage = () => {
                 <h3>{t('home.techStack.title')}</h3>
                 {techStackData?.proficient?.skills && (
                     <div className="tech-skills-container">
-                        {techStackData.proficient.skills.map(tech => (
+                        {/* FIX: Wrapped 'tech' in parentheses to make the arrow function signature more explicit and prevent potential parsing errors. */}
+                        {techStackData.proficient.skills.map((tech) => (
                             <span key={tech} className="tech-skill-tag" data-interactive>
                                 {tech}
                             </span>
