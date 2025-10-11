@@ -3,8 +3,10 @@ import { projectsData, Project } from '../data';
 import { useIntl } from '../context/IntlContext';
 
 const ProjectsPage = () => {
-    const [activeProject, setActiveProject] = useState<Project | null>(projectsData.length > 0 ? projectsData[0] : null);
     const { t } = useIntl();
+    const [activeProject, setActiveProject] = useState<Project | null>(
+        projectsData.length > 0 ? projectsData[0] : null
+    );
 
     const handleMouseEnter = (project: Project) => {
         setActiveProject(project);
@@ -14,6 +16,7 @@ const ProjectsPage = () => {
         <div className="projects-page">
             <div className="projects-list-container">
                 <h2>{t('home.featuredProjects.title')}</h2>
+
                 <ul className="projects-list">
                     {projectsData.map(project => (
                         <li 
@@ -22,7 +25,6 @@ const ProjectsPage = () => {
                             onMouseEnter={() => handleMouseEnter(project)}
                         >
                             <a href="#" data-interactive>
-                                {/* This image is only visible on mobile via CSS */}
                                 <img 
                                     src={project.imageUrl} 
                                     alt={t(`projects.${project.id}.name`)} 
