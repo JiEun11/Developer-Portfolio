@@ -272,13 +272,13 @@ a {
   background-position: center;
   opacity: 0;
   pointer-events: none;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
   z-index: -1;
 }
 
 .project-image-preview.visible {
   opacity: 1;
-  transform: translate(0, -50%) scale(1);
+  transform: translate(0, -50%) scale(1.05);
 }
 
 /* --- About Page --- */
