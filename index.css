@@ -238,12 +238,13 @@ a {
   border-radius: 2rem;
   font-size: 0.9rem;
   font-weight: 400;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .tech-skill-tag:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-3px);
 }
 
 .project-item a {
@@ -350,12 +351,13 @@ a {
   border-radius: 2rem;
   font-size: 0.8rem;
   font-weight: 400;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .project-tech-tag:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
 }
 
 
