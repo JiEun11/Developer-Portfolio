@@ -192,8 +192,7 @@ a {
   display: grid;
   width: 100%;
   min-height: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 2fr 1fr;
   gap: 2rem;
 }
 
@@ -206,8 +205,6 @@ a {
 }
 
 .intro {
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
   justify-content: center;
 }
 
@@ -215,17 +212,6 @@ a {
   font-size: 5vw;
   font-weight: 500;
   line-height: 1.1;
-}
-
-.tech-stack {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-}
-
-.projects {
-  grid-column: 1 / 4;
-  grid-row: 3 / 4;
-  position: relative;
 }
 
 .grid-item h3 {
@@ -246,10 +232,6 @@ a {
   margin-bottom: 0.5rem;
 }
 
-.projects ul {
-  list-style: none;
-}
-
 .project-item a {
   font-size: 2rem;
   font-weight: 500;
@@ -261,25 +243,66 @@ a {
   transform: translateX(10px);
 }
 
+/* --- Projects Page --- */
+.projects-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 0 2rem;
+}
+
+.projects-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projects-page h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+  opacity: 0.7;
+}
+
+.projects-list {
+  list-style: none;
+  text-align: left;
+}
+
+.project-item-image {
+  display: none; /* Hidden on desktop */
+}
+
+.projects-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 .project-image-preview {
-  position: absolute;
-  top: 50%;
-  right: 5rem;
-  transform: translate(0, -50%) scale(0.9);
-  width: 300px;
-  height: 200px;
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 4 / 3;
   background-size: cover;
   background-position: center;
   opacity: 0;
+  transform: scale(0.95);
   pointer-events: none;
   transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
-  z-index: -1;
 }
 
 .project-image-preview.visible {
   opacity: 1;
-  transform: translate(0, -50%) scale(1.05);
+  transform: scale(1);
 }
+
 
 /* --- About Page --- */
 .about-page {
@@ -410,19 +433,51 @@ a {
   .intro h1 {
     font-size: 10vw;
   }
+
+  .projects-page {
+    display: block;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .projects-list {
+    text-align: center;
+  }
+
+  .projects-image-container {
+    display: none;
+  }
+
+  .project-item {
+    margin-bottom: 2rem;
+  }
+  
   .project-item a {
     font-size: 1.5rem;
   }
-  .project-image-preview {
-    display: none;
+
+  .project-item a:hover {
+    transform: none;
   }
+
+  .project-item-image {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 1rem;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
   .about-page {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
     height: auto;
     padding: 2rem 0;
+    justify-content: flex-start;
   }
+
   .profile-picture {
     width: 150px;
     height: 210px;

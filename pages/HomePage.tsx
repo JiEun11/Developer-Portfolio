@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { projectsData } from '../data';
+import React from 'react';
 import { useIntl } from '../context/IntlContext';
 
 const HomePage = () => {
-    const [activeImage, setActiveImage] = useState<string | null>(null);
     const { t } = useIntl();
     const techStackData = t('home.techStack.items') as string[];
 
@@ -17,22 +15,6 @@ const HomePage = () => {
                 <ul>
                     {techStackData.map(tech => <li key={tech}>{tech}</li>)}
                 </ul>
-            </div>
-            <div className="grid-item projects">
-                <h3>{t('home.featuredProjects.title')}</h3>
-                <ul>
-                    {projectsData.map(project => (
-                        <li key={project.id} className="project-item" 
-                            onMouseEnter={() => setActiveImage(project.imageUrl)}
-                            onMouseLeave={() => setActiveImage(null)}>
-                            <a href="#" data-interactive>{t(`projects.${project.id}.name`)}</a>
-                        </li>
-                    ))}
-                </ul>
-                <div 
-                    className={`project-image-preview ${activeImage ? 'visible' : ''}`}
-                    style={{ backgroundImage: `url(${activeImage})` }}
-                ></div>
             </div>
         </div>
     );

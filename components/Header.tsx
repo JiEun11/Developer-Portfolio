@@ -25,6 +25,14 @@ const Header = () => {
                 </a>
                 <a 
                     href="#" 
+                    className={page === 'projects' ? 'active' : ''} 
+                    onClick={(e) => handleNavClick(e, 'projects')} 
+                    data-interactive
+                >
+                    {t('nav.projects')}
+                </a>
+                <a 
+                    href="#" 
                     className={page === 'about' ? 'active' : ''} 
                     onClick={(e) => handleNavClick(e, 'about')} 
                     data-interactive

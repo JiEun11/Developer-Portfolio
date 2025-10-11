@@ -2,10 +2,12 @@ import React from 'react';
 import { useNavigation } from '../context/NavigationContext';
 import HomePage from '../pages/HomePage';
 import AboutPage from '../pages/AboutPage';
+import ProjectsPage from '../pages/ProjectsPage';
 
 const pages: { [key: string]: React.ComponentType } = {
     home: HomePage,
     about: AboutPage,
+    projects: ProjectsPage,
 };
 
 const PageTransition = () => {
