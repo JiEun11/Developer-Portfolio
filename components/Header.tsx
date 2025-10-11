@@ -1,8 +1,10 @@
 import React from 'react';
 import { useNavigation } from '../context/NavigationContext';
+import { useIntl } from '../context/IntlContext';
 
 const Header = () => {
     const { page, setPage } = useNavigation();
+    const { t } = useIntl();
 
     const handleNavClick = (e: React.MouseEvent, newPage: string) => {
         e.preventDefault();
@@ -11,7 +13,7 @@ const Header = () => {
 
     return (
         <header className="header">
-            <div className="header-logo" data-interactive>YOUR NAME</div>
+            <div className="header-logo" data-interactive>{t('header.name')}</div>
             <nav className="nav">
                 <a 
                     href="#" 
@@ -19,7 +21,7 @@ const Header = () => {
                     onClick={(e) => handleNavClick(e, 'home')} 
                     data-interactive
                 >
-                    Home
+                    {t('nav.home')}
                 </a>
                 <a 
                     href="#" 
@@ -27,7 +29,7 @@ const Header = () => {
                     onClick={(e) => handleNavClick(e, 'about')} 
                     data-interactive
                 >
-                    About
+                    {t('nav.about')}
                 </a>
             </nav>
         </header>

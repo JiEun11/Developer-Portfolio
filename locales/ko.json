@@ -1,0 +1,18 @@
+{
+  "preloader.text": "포트폴리오",
+  "header.name": "이름",
+  "nav.home": "홈",
+  "nav.about": "소개",
+  "home.title": "미적이고 기능적인 웹 경험을 구축하는 데 중점을 둔 크리에이티브 개발자입니다.",
+  "home.techStack.title": "기술 스택",
+  "home.techStack.items": ["TypeScript", "React", "Node.js", "GraphQL", "Figma"],
+  "home.featuredProjects.title": "주요 프로젝트",
+  "projects.1.name": "이커머스 플랫폼",
+  "projects.2.name": "데이터 시각화 대시보드",
+  "projects.3.name": "모바일 피트니스 앱",
+  "about.title": "나의 철학",
+  "about.paragraph": "저는 디자인과 코드에서 단순함과 명료함의 힘을 믿습니다. 제 목표는 시각적으로 매력적일 뿐만 아니라 모든 사람이 직관적이고 접근하기 쉬운 디지털 제품을 만드는 것입니다. 저는 지속적인 학습에 대한 열정이 있으며 웹에서 가능한 것의 한계를 뛰어넘기 위해 항상 새로운 기술을 탐구하고자 합니다.",
+  "language.selector.en": "영어",
+  "language.selector.ko": "한국어",
+  "language.selector.de": "독일어"
+}

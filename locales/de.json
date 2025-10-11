@@ -1,0 +1,18 @@
+{
+  "preloader.text": "PORTFOLIO",
+  "header.name": "DEIN NAME",
+  "nav.home": "Startseite",
+  "nav.about": "Über mich",
+  "home.title": "Kreativer Entwickler mit Fokus auf die Erstellung ästhetischer & funktionaler Weberlebnisse.",
+  "home.techStack.title": "TECHNOLOGIEN",
+  "home.techStack.items": ["TypeScript", "React", "Node.js", "GraphQL", "Figma"],
+  "home.featuredProjects.title": "AUSGEWÄHLTE PROJEKTE",
+  "projects.1.name": "E-Commerce-Plattform",
+  "projects.2.name": "Datenvisualisierungs-Dashboard",
+  "projects.3.name": "Mobile Fitness-App",
+  "about.title": "Meine Philosophie",
+  "about.paragraph": "Ich glaube an die Kraft der Einfachheit und Klarheit in Design und Code. Mein Ziel ist es, digitale Produkte zu schaffen, die nicht nur visuell ansprechend, sondern auch intuitiv und für jeden zugänglich sind. Ich lerne leidenschaftlich gerne und bin immer bestrebt, neue Technologien zu erforschen, um die Grenzen des im Web Möglichen zu erweitern.",
+  "language.selector.en": "Englisch",
+  "language.selector.ko": "Koreanisch",
+  "language.selector.de": "Deutsch"
+}

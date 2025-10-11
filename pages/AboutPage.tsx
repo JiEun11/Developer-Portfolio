@@ -1,6 +1,8 @@
 import React from 'react';
+import { useIntl } from '../context/IntlContext';
 
 const AboutPage = () => {
+    const { t } = useIntl();
     return (
         <div className="about-page">
             <img 
@@ -9,9 +11,9 @@ const AboutPage = () => {
                 className="profile-picture"
             />
             <div className="about-text">
-                <h2>My Philosophy</h2>
+                <h2>{t('about.title')}</h2>
                 <p>
-                    I believe in the power of simplicity and clarity in design and code. My goal is to create digital products that are not only visually appealing but also intuitive and accessible to everyone. I am passionate about continuous learning and always eager to explore new technologies to push the boundaries of what's possible on the web.
+                    {t('about.paragraph')}
                 </p>
             </div>
         </div>

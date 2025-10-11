@@ -1,0 +1,18 @@
+{
+  "preloader.text": "PORTFOLIO",
+  "header.name": "YOUR NAME",
+  "nav.home": "Home",
+  "nav.about": "About",
+  "home.title": "Creative Developer focused on building aesthetic & functional web experiences.",
+  "home.techStack.title": "TECH STACK",
+  "home.techStack.items": ["TypeScript", "React", "Node.js", "GraphQL", "Figma"],
+  "home.featuredProjects.title": "FEATURED PROJECTS",
+  "projects.1.name": "E-commerce Platform",
+  "projects.2.name": "Data Visualization Dashboard",
+  "projects.3.name": "Mobile Fitness App",
+  "about.title": "My Philosophy",
+  "about.paragraph": "I believe in the power of simplicity and clarity in design and code. My goal is to create digital products that are not only visually appealing but also intuitive and accessible to everyone. I am passionate about continuous learning and always eager to explore new technologies to push the boundaries of what's possible on the web.",
+  "language.selector.en": "English",
+  "language.selector.ko": "Korean",
+  "language.selector.de": "German"
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavigationProvider } from './context/NavigationContext';
+import { IntlProvider } from './context/IntlContext';
 import CustomCursor from './components/CustomCursor';
 import Preloader from './components/Preloader';
 import Header from './components/Header';
@@ -17,17 +18,19 @@ const App = () => {
   }, []);
 
   return (
-    <NavigationProvider>
-      <CustomCursor />
-      <Preloader visible={loading} />
-      {!loading && (
-        <div className="app-container">
-          <Header />
-          <PageTransition />
-          <Footer />
-        </div>
-      )}
-    </NavigationProvider>
+    <IntlProvider>
+        <NavigationProvider>
+        <CustomCursor />
+        <Preloader visible={loading} />
+        {!loading && (
+            <div className="app-container">
+            <Header />
+            <PageTransition />
+            <Footer />
+            </div>
+        )}
+        </NavigationProvider>
+    </IntlProvider>
   );
 };
 
