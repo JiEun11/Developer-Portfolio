@@ -165,6 +165,7 @@ a {
   animation-duration: var(--transition-speed);
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  overflow-y: auto;
 }
 
 .page-enter {
@@ -190,7 +191,7 @@ a {
 .home-grid {
   display: grid;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 2rem;
@@ -287,7 +288,7 @@ a {
   justify-content: center;
   gap: 4rem;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
 
 .profile-picture {
