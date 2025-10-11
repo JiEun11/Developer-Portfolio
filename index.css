@@ -292,11 +292,13 @@ a {
   display: none; /* Hidden on desktop */
 }
 
-.projects-image-container {
+.projects-details-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+  gap: 2rem;
 }
 
 .project-image-preview {
@@ -315,6 +317,45 @@ a {
 .project-image-preview.visible {
   opacity: 1;
   transform: scale(1);
+}
+
+.project-details {
+  text-align: center;
+  max-width: 450px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.project-tech-tag {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+  padding: 0.4rem 0.9rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-tech-tag:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 
@@ -458,7 +499,7 @@ a {
     text-align: center;
   }
 
-  .projects-image-container {
+  .projects-details-container {
     display: none;
   }
 

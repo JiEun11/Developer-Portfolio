@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { projectsData } from '../data';
+import { projectsData, Project } from '../data';
 import { useIntl } from '../context/IntlContext';
 
 const ProjectsPage = () => {
-    // Initialize with the first project's image to avoid an empty container on load
-    const [activeImage, setActiveImage] = useState<string>(projectsData.length > 0 ? projectsData[0].imageUrl : '');
+    const [activeProject, setActiveProject] = useState<Project | null>(projectsData.length > 0 ? projectsData[0] : null);
     const { t } = useIntl();
+
+    const handleMouseEnter = (project: Project) => {
+        setActiveProject(project);
+    };
 
     return (
         <div className="projects-page">
@@ -16,7 +19,7 @@ const ProjectsPage = () => {
                         <li 
                             key={project.id} 
                             className="project-item"
-                            onMouseEnter={() => setActiveImage(project.imageUrl)}
+                            onMouseEnter={() => handleMouseEnter(project)}
                         >
                             <a href="#" data-interactive>
                                 {/* This image is only visible on mobile via CSS */}
@@ -31,12 +34,23 @@ const ProjectsPage = () => {
                     ))}
                 </ul>
             </div>
-            <div className="projects-image-container">
-                {/* This div is for desktop hover preview */}
+            <div className="projects-details-container">
                 <div 
-                    className={`project-image-preview ${activeImage ? 'visible' : ''}`}
-                    style={{ backgroundImage: `url(${activeImage})` }}
+                    className={`project-image-preview ${activeProject ? 'visible' : ''}`}
+                    style={{ backgroundImage: `url(${activeProject?.imageUrl})` }}
                 ></div>
+                {activeProject && (
+                    <div className="project-details" key={activeProject.id}>
+                        <p className="project-description">
+                            {t(activeProject.descriptionKey)}
+                        </p>
+                        <div className="project-technologies">
+                            {activeProject.technologies.map(tech => (
+                                <span key={tech} className="project-tech-tag" data-interactive>{tech}</span>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );
