@@ -5,8 +5,17 @@
   "nav.projects": "프로젝트",
   "nav.about": "소개",
   "home.title": "미적이고 기능적인 웹 경험을 구축하는 데 중점을 둔 크리에이티브 개발자입니다.",
-  "home.techStack.title": "기술 스택",
-  "home.techStack.items": ["TypeScript", "React", "Node.js", "GraphQL", "Figma"],
+  "home.techStack.title": "보유 기술",
+  "home.techStack.items": {
+    "proficient": {
+      "title": "숙련",
+      "skills": ["JavaScript", "React.js", "jQuery", "Node.js", "MongoDB", "AWS", "Jenkins", "Git"]
+    },
+    "exposure": {
+      "title": "경험",
+      "skills": ["Python", "Java", "Spring Boot", "RDB(Postgres, MySQL, Oracle)", "JPA", "Kubernates", "ElasticSearch"]
+    }
+  },
   "home.featuredProjects.title": "주요 프로젝트",
   "projects.1.name": "이커머스 플랫폼",
   "projects.2.name": "데이터 시각화 대시보드",

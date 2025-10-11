@@ -223,13 +223,27 @@ a {
   opacity: 0.7;
 }
 
-.tech-stack ul {
-  list-style: none;
+.tech-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
 }
 
-.tech-stack li {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+.tech-skill-tag {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.tech-skill-tag:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .project-item a {
