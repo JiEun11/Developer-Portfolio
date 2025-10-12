@@ -1,35 +1,35 @@
 {
-  "preloader.text": "포트폴리오",
-  "header.name": "Bella(김지은)",
+  "preloader.text": "로딩 중...",
+  "header.name": "김지은",
   "nav.home": "홈",
   "nav.projects": "프로젝트",
   "nav.about": "소개",
   "home.title": "빠르게 변화하는 기술 환경에서 사용자 중심의 시스템을 설계하고 구현하는 것을 지향하는 풀스택 개발자입니다.",
-  "home.description.short": "철강, 교육, 글로벌 SaaS 등 다양한 산업과 조직 환경에서 복잡한 도메인을 빠르게 이해하고, 구체적인 개선을 이끌어냈습니다.\n\nERP 시스템 운영자로 시작해, 실시간 시험 감독 시스템, 글로벌 진출 QA 리딩, AI 기반 예측 서비스까지 폭넓은 경험을 쌓았습니다.\n\nReact.js를 활용한 UI/UX 최적화부터 Spring Boot 및 Node.js 기반의 안정적인 백엔드 설계, MongoDB와 PostgreSQL을 포함한 데이터 흐름 전반에 이르기까지 제품의 전 주기를 경험했습니다.\n\n3년간 개발팀 리더, 인턴 멘토, 품질 책임자 등 다양한 역할을 수행하며, 기술뿐 아니라 커뮤니케이션과 리더십의 중요성을 깊이 체감했습니다. 특히 한정된 시간 내에 서비스 품질을 끌어 올리고, 레거시 시스템에 AI 기능을 자연스럽게 통합하는 등의 경험은 저의 성장의 큰 자산이 되었습니다.",
-  "home.description.more": "실제 User Test 진행 결과, 평균 만족도 2.7점(5점 만점)에서 4.3점으로 59% 이상 대폭 향상 시켰고, 페이지 진입 후 시험 설정 소요 시간도 12분 42초에서 5분 35초로 56% 단축하는 등 수치로 검증된 개선 성과를 달성했습니다.\n\n기술에 대한 집요함과 유연한 사고를 바탕으로, 사용자 경험과 팀 문화를 함께 개선하는 개발자를 지향합니다. 디지털을 넘어 사람 중심의 개발을 추구하며, 더 나은 내일을 위해 끊임없이 배우고, 기록하고, 공유하겠습니다.",
+  "home.description.short": "철강, 교육, 글로벌 SaaS 등 다양한 산업과 조직 환경에서 복잡한 도메인을 빠르게 이해하고, 구체적인 개선을 이끌어냈습니다.\nERP 시스템 운영자로 시작해, 실시간 시험 감독 시스템, 글로벌 진출 QA 리딩, AI 기반 예측 서비스까지 폭넓은 경험을 쌓았습니다.\nReact.js를 활용한 UI/UX 최적화부터 Spring Boot 및 Node.js 기반의 안정적인 백엔드 설계, MongoDB와 PostgreSQL을 포함한 데이터 흐름 전반에 이르기까지 제품의 전 주기를 경험했습니다.\n3년간 개발팀 리더, 인턴 멘토, 품질 책임자 등 다양한 역할을 수행하며, 기술뿐 아니라 커뮤니케이션과 리더십의 중요성을 깊이 체감 했습니다.\n특히 한정된 시간 내에 서비스 품질을 끌어 올리고, 레거시 시스템에 AI 기능을 자연스럽게 통합하는 등의 경험은 저의 성장의 큰 자산이 되었습니다.",
+  "home.description.more": "실제 User Test 진행 결과, 평균 만족도 2.7점(5점 만점)에서 4.3점으로 59% 이상 대폭 향상 시켰고, 페이지 진입 후 시험 설정 소요 시간도 12분 42초에서 5분 35초로 56% 단축하는 등 수치로 검증된 개선 성과를 달성했습니다.\n기술에 대한 집요함과 유연한 사고를 바탕으로, 사용자 경험과 팀 문화를 함께 개선하는 개발자를 지향합니다.\n디지털을 넘어 사람 중심의 개발을 추구하며, 더 나은 내일을 위해 끊임없이 배우고, 기록하고, 공유하겠습니다.",
+  "common.readMore": "더보기",
+  "common.showLess": "접기",
   "home.techStack.title": "보유 기술",
   "home.techStack.items": {
     "proficient": {
       "title": "숙련",
-      "skills": ["JavaScript", "React.js", "jQuery", "Node.js", "MongoDB", "AWS", "Jenkins", "Git"]
+      "skills": ["JavaScript (ES6+)", "TypeScript", "React.js", "Node.js", "HTML5 & CSS3", "MongoDB", "Git & GitHub"]
     },
     "exposure": {
       "title": "경험",
-      "skills": ["Python", "Java", "Spring Boot", "RDB(Postgres, MySQL, Oracle)", "JPA", "Kubernates", "ElasticSearch"]
+      "skills": ["Python", "Java", "Spring Boot", "RDB(Postgres, MySQL, Oracle)", "JPA", "Kubernetes", "ElasticSearch", "R"]
     }
   },
   "home.featuredProjects.title": "주요 프로젝트",
   "projects.1.name": "이커머스 플랫폼",
-  "projects.1.description": "제품 카탈로그, 사용자 인증 및 안전한 결제 게이트웨이를 갖춘 완전한 기능의 이커머스 사이트입니다. 성능과 사용자 경험에 중점을 두고 제작되었습니다.",
+  "projects.1.description": "상품 관리, 장바구니, 결제를 위한 Stripe 연동 기능을 갖춘 풀스택 이커머스 플랫폼입니다.",
   "projects.2.name": "데이터 시각화 대시보드",
-  "projects.2.description": "복잡한 데이터 세트를 시각화하기 위한 대화형 대시보드입니다. 동적 차트와 필터 기능을 통해 사용자가 데이터에서 통찰력을 얻을 수 있도록 돕습니다.",
+  "projects.2.description": "D3.js를 사용하여 대용량 데이터셋을 시각화하고 Firebase 백엔드 및 BigQuery에 연결된 인터랙티브 대시보드입니다.",
   "projects.3.name": "모바일 피트니스 앱",
-  "projects.3.description": "운동 및 피트니스 목표를 추적하기 위한 크로스 플랫폼 모바일 애플리케이션입니다. 실시간 진행 상황 모니터링 및 소셜 공유 기능이 포함되어 있습니다.",
-  "about.title": "",
+  "projects.3.description": "React Native와 AWS Amplify로 구축된, 운동 및 피트니스 진행 상황을 추적하는 크로스플랫폼 모바일 앱입니다.",
+  "about.title": "자기소개",
   "about.paragraph": "저는 기술을 통해 비즈니스의 문제를 해결하고 사용자에게 실질적인 가치를 전달하는 것에 가장 큰 보람을 느낍니다. 단순히 기능을 구현하는 것을 넘어, 확장 가능하고 안정적인 아키텍처를 설계하고 깊이 있는 분석으로 사용자 경험을 저해하는 근본적인 원인을 해결하는 데 집중합니다. 동료와 함께 성장하고 지식을 공유하는 것이 팀의 성공에 필수적이라 믿으며, 기술적 리더십과 원활한 소통을 통해 팀의 잠재력을 최대로 이끌어내는 데 기여하고 싶습니다.",
   "language.selector.en": "영어",
   "language.selector.ko": "한국어",
-  "language.selector.de": "독일어",
-  "common.readMore": "더보기",
-  "common.showLess": "접기"
+  "language.selector.de": "독일어"
 }

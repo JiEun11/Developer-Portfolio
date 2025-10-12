@@ -1,35 +1,35 @@
 {
-  "preloader.text": "PORTFOLIO",
-  "header.name": "Bella(JiEun Kim)",
+  "preloader.text": "Lädt...",
+  "header.name": "Jieun Kim",
   "nav.home": "Startseite",
   "nav.projects": "Projekte",
   "nav.about": "Über mich",
-  "home.title": "Software Engineer at 3+ years of experience in full-stack development, and project development lead dedicated to building reliable, scalable products. Specialized in JavaScript, Node.js, React.js, MongoDB to create impactful and user-centric web applications.",
+  "home.title": "Softwareentwicklerin mit über 3 Jahren Erfahrung in der Full-Stack-Entwicklung und Projektleitung, spezialisiert auf die Entwicklung zuverlässiger, skalierbarer Produkte. Expertin in JavaScript, Node.js, React.js und MongoDB, um wirkungsvolle und benutzerzentrierte Webanwendungen zu erstellen.",
   "home.description.short": "",
   "home.description.more": "",
-  "home.techStack.title": "TECHNISCHE FÄHIGKEITEN",
+  "common.readMore": "Mehr lesen",
+  "common.showLess": "Weniger anzeigen",
+  "home.techStack.title": "Technologien",
   "home.techStack.items": {
     "proficient": {
       "title": "Sicher im Umgang",
-      "skills": ["JavaScript", "React.js", "jQuery", "Node.js", "MongoDB", "AWS", "Jenkins", "Git"]
+      "skills": ["JavaScript (ES6+)", "TypeScript", "React.js", "Node.js", "HTML5 & CSS3", "MongoDB", "Git & GitHub"]
     },
     "exposure": {
       "title": "Erfahrung mit",
-      "skills": ["Python", "Java", "Spring Boot", "RDB(Postgres, MySQL, Oracle)", "JPA", "Kubernates", "ElasticSearch"]
+      "skills": ["Python", "Java", "Spring Boot", "RDB(Postgres, MySQL, Oracle)", "JPA", "Kubernetes", "ElasticSearch", "R"]
     }
   },
-  "home.featuredProjects.title": "AUSGEWÄHLTE PROJEKTE",
+  "home.featuredProjects.title": "Ausgewählte Projekte",
   "projects.1.name": "E-Commerce-Plattform",
-  "projects.1.description": "Eine voll funktionsfähige E-Commerce-Website mit Produktkatalogen, Benutzerauthentifizierung und einem sicheren Zahlungsgateway. Entwickelt mit Fokus auf Leistung und Benutzererlebnis.",
+  "projects.1.description": "Eine Full-Stack-E-Commerce-Plattform mit Produktmanagement, Warenkorb und Stripe-Integration für Zahlungen.",
   "projects.2.name": "Datenvisualisierungs-Dashboard",
-  "projects.2.description": "Ein interaktives Dashboard zur Visualisierung komplexer Datensätze. Bietet dynamische Diagramme und Filter, um Benutzern zu helfen, Einblicke aus ihren Daten zu gewinnen.",
+  "projects.2.description": "Ein interaktives Dashboard zur Visualisierung großer Datensätze mit D3.js, verbunden mit einem Firebase-Backend und BigQuery.",
   "projects.3.name": "Mobile Fitness-App",
-  "projects.3.description": "Eine plattformübergreifende mobile Anwendung zur Verfolgung von Trainingseinheiten und Fitnesszielen. Enthält Echtzeit-Fortschrittsüberwachung und Social-Sharing-Funktionen.",
-  "about.title": "Meine Philosophie",
+  "projects.3.description": "Eine plattformübergreifende mobile App zur Verfolgung von Workouts und Fitnessfortschritten, erstellt mit React Native und AWS Amplify.",
+  "about.title": "Über mich",
   "about.paragraph": "Meine größte Erfüllung finde ich darin, durch den Einsatz von Technologie geschäftliche Probleme zu lösen und für die Nutzer einen echten Mehrwert zu schaffen. Mein Anspruch geht über die reine Implementierung von Funktionen hinaus: Ich konzentriere mich darauf, skalierbare und stabile Architekturen zu entwerfen und durch tiefgehende Analysen die Kernursachen von Problemen zu beheben, welche die User Experience beeinträchtigen. Ich bin fest davon überzeugt, dass gemeinsames Wachstum und der Austausch von Wissen für den Erfolg eines Teams unerlässlich sind. Durch technische Führung und klare Kommunikation möchte ich dazu beitragen, das volle Potenzial des Teams zu entfalten.",
   "language.selector.en": "Englisch",
   "language.selector.ko": "Koreanisch",
-  "language.selector.de": "Deutsch",
-  "common.readMore": "Mehr lesen",
-  "common.showLess": "Weniger anzeigen"
+  "language.selector.de": "Deutsch"
 }
