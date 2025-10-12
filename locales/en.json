@@ -4,7 +4,9 @@
   "nav.home": "Home",
   "nav.projects": "Projects",
   "nav.about": "About",
-  "home.title": "Creative Developer focused on building aesthetic & functional web experiences.",
+  "home.title": "Software Engineer at 3+ years of experience in full-stack development, and project development lead dedicated to building reliable, scalable products. Specialized in JavaScript, Node.js, React.js, MongoDB to create impactful and user-centric web applications.",
+  "home.description.short": "",
+  "home.description.more": "",
   "home.techStack.title": "TECHNICAL SKILLS",
   "home.techStack.items": {
     "proficient": {
@@ -27,5 +29,7 @@
   "about.paragraph": "I find my greatest satisfaction in leveraging technology to solve business problems and deliver tangible value to users. I strive to go beyond mere feature implementation, focusing instead on designing scalable, stable architectures and conducting in-depth analysis to resolve the root causes of issues that impede the user experience. I firmly believe that collaborative growth and knowledge sharing are essential to a team's success, and I aim to contribute by using my technical leadership and clear communication to unlock the team's full potential.",
   "language.selector.en": "English",
   "language.selector.ko": "Korean",
-  "language.selector.de": "German"
+  "language.selector.de": "German",
+  "common.readMore": "Read More",
+  "common.showLess": "Show Less"
 }

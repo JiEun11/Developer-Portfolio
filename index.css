@@ -6,7 +6,7 @@
   --border-color-hover: rgba(255, 255, 255, 0.5);
   --tag-bg-color: rgba(255, 255, 255, 0.05);
   --tag-bg-color-hover: rgba(255, 255, 255, 0.1);
-  --primary-font: 'Inter', sans-serif;
+  --primary-font: 'Poppins', sans-serif;
   --transition-speed: 0.5s;
 }
 
@@ -228,11 +228,62 @@ a {
   justify-content: center;
 }
 
-.intro h1 {
-  font-size: 5vw;
-  font-weight: 500;
-  line-height: 1.1;
+.intro-content {
+  width: 100%;
 }
+
+.intro-title {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.75rem; /* Default for en/de */
+}
+
+.intro-title.ko {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.intro-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 300;
+  white-space: pre-line;
+  opacity: 0.9;
+}
+
+.expanded-description {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out, margin-top 0.6s ease-in-out;
+  margin-top: 0;
+  white-space: pre-line;
+}
+
+.expanded-description.visible {
+  opacity: 1;
+  margin-top: 1.8rem;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  text-decoration: underline;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.read-more-btn:hover {
+  opacity: 1;
+}
+
 
 .grid-item h3 {
   font-size: 1rem;
@@ -551,8 +602,13 @@ a {
     flex-direction: column;
     height: auto;
   }
-  .intro h1 {
-    font-size: 10vw;
+  
+  .intro-title {
+    font-size: 1.5rem;
+  }
+  .intro-title.ko {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
   }
 
   .projects-page {
