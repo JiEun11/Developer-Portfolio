@@ -24,7 +24,11 @@ const ProjectsPage = () => {
                             className="project-item"
                             onMouseEnter={() => handleMouseEnter(project)}
                         >
-                            <a href="#" data-interactive>
+                            <a 
+                                href="#" 
+                                data-interactive
+                                className={activeProject?.id === project.id ? 'active' : ''}
+                            >
                                 <img 
                                     src={project.imageUrl} 
                                     alt={t(`projects.${project.id}.name`)} 
