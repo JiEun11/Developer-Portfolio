@@ -29,6 +29,7 @@
   "projects.3.description": "Eine plattformübergreifende mobile App zur Verfolgung von Workouts und Fitnessfortschritten, erstellt mit React Native und AWS Amplify.",
   "about.title": "Über mich",
   "about.paragraph": "Meine größte Erfüllung finde ich darin, durch den Einsatz von Technologie geschäftliche Probleme zu lösen und für die Nutzer einen echten Mehrwert zu schaffen. Mein Anspruch geht über die reine Implementierung von Funktionen hinaus: Ich konzentriere mich darauf, skalierbare und stabile Architekturen zu entwerfen und durch tiefgehende Analysen die Kernursachen von Problemen zu beheben, welche die User Experience beeinträchtigen. Ich bin fest davon überzeugt, dass gemeinsames Wachstum und der Austausch von Wissen für den Erfolg eines Teams unerlässlich sind. Durch technische Führung und klare Kommunikation möchte ich dazu beitragen, das volle Potenzial des Teams zu entfalten.",
+  "about.resumeButton": "Lebenslauf ansehen",
   "language.selector.en": "Englisch",
   "language.selector.ko": "Koreanisch",
   "language.selector.de": "Deutsch"

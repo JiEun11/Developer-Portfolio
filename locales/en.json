@@ -29,6 +29,7 @@
   "projects.3.description": "A cross-platform mobile app for tracking workouts and fitness progress, built with React Native and AWS Amplify.",
   "about.title": "About Me",
   "about.paragraph": "I find my greatest satisfaction in leveraging technology to solve business problems and deliver tangible value to users. I strive to go beyond mere feature implementation, focusing instead on designing scalable, stable architectures and conducting in-depth analysis to resolve the root causes of issues that impede the user experience. I firmly believe that collaborative growth and knowledge sharing are essential to a team's success, and I aim to contribute by using my technical leadership and clear communication to unlock the team's full potential.",
+  "about.resumeButton": "View Resume",
   "language.selector.en": "English",
   "language.selector.ko": "Korean",
   "language.selector.de": "German"

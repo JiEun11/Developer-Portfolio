@@ -29,6 +29,7 @@
   "projects.3.description": "React Native와 AWS Amplify로 구축된, 운동 및 피트니스 진행 상황을 추적하는 크로스플랫폼 모바일 앱입니다.",
   "about.title": "자기소개",
   "about.paragraph": "저는 기술을 통해 비즈니스의 문제를 해결하고 사용자에게 실질적인 가치를 전달하는 것에 가장 큰 보람을 느낍니다. 단순히 기능을 구현하는 것을 넘어, 확장 가능하고 안정적인 아키텍처를 설계하고 깊이 있는 분석으로 사용자 경험을 저해하는 근본적인 원인을 해결하는 데 집중합니다. 동료와 함께 성장하고 지식을 공유하는 것이 팀의 성공에 필수적이라 믿으며, 기술적 리더십과 원활한 소통을 통해 팀의 잠재력을 최대로 이끌어내는 데 기여하고 싶습니다.",
+  "about.resumeButton": "이력서 다운로드",
   "language.selector.en": "영어",
   "language.selector.ko": "한국어",
   "language.selector.de": "독일어"
