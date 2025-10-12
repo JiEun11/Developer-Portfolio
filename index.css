@@ -2,9 +2,23 @@
 :root {
   --background-color: #000000;
   --text-color: #FFFFFF;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --border-color-hover: rgba(255, 255, 255, 0.5);
+  --tag-bg-color: rgba(255, 255, 255, 0.05);
+  --tag-bg-color-hover: rgba(255, 255, 255, 0.1);
   --primary-font: 'Inter', sans-serif;
   --transition-speed: 0.5s;
 }
+
+body.light-theme {
+    --background-color: #FFFFFF;
+    --text-color: #000000;
+    --border-color: rgba(0, 0, 0, 0.15);
+    --border-color-hover: rgba(0, 0, 0, 0.4);
+    --tag-bg-color: rgba(0, 0, 0, 0.05);
+    --tag-bg-color-hover: rgba(0, 0, 0, 0.1);
+}
+
 
 * {
   box-sizing: border-box;
@@ -20,6 +34,7 @@ html, body {
   overflow: hidden; /* Hide scrollbars during transitions/loading */
   width: 100vw;
   height: 100vh;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 #root {
@@ -45,7 +60,7 @@ a {
   left: 0;
   width: 20px;
   height: 20px;
-  background-color: var(--text-color);
+  background-color: #FFFFFF;
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
@@ -197,11 +212,16 @@ a {
 }
 
 .grid-item {
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border-color);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.grid-item:hover {
+    background-color: var(--tag-bg-color-hover);
+    border-color: var(--border-color-hover);
 }
 
 .intro {
@@ -223,16 +243,28 @@ a {
   opacity: 0.7;
 }
 
+.tech-category + .tech-category {
+  margin-top: 2rem;
+}
+
+.tech-category-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
 .tech-skills-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.5rem;
 }
 
 .tech-skill-tag {
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--border-color);
   color: var(--text-color);
   padding: 0.5rem 1rem;
   border-radius: 2rem;
@@ -242,8 +274,8 @@ a {
 }
 
 .tech-skill-tag:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--tag-bg-color-hover);
+  border-color: var(--border-color-hover);
   transform: translateY(-3px);
 }
 
@@ -289,12 +321,12 @@ a {
 }
 
 .project-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid var(--border-color);
   padding: 1.5rem 0;
 }
 
 .project-item:first-child {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid var(--border-color);
 }
 
 .project-item a {
@@ -371,8 +403,8 @@ a {
 }
 
 .project-tech-tag {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--tag-bg-color);
+  border: 1px solid var(--border-color);
   color: var(--text-color);
   padding: 0.4rem 0.9rem;
   border-radius: 2rem;
@@ -382,8 +414,8 @@ a {
 }
 
 .project-tech-tag:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.4);
+  background-color: var(--tag-bg-color-hover);
+  border-color: var(--border-color-hover);
   transform: translateY(-3px);
 }
 
@@ -436,8 +468,14 @@ a {
     align-items: center;
 }
 
-.social-links a {
-  margin: 0 1.5rem;
+.social-links > * {
+    margin: 0 1.5rem;
+}
+
+.social-links a, .social-links button {
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .social-links svg {
@@ -447,14 +485,13 @@ a {
   transition: transform 0.3s ease;
 }
 
-.social-links a:hover svg {
+.social-links a:hover svg, .social-links button:hover svg {
   transform: scale(1.2);
 }
 
 /* --- Language Selector --- */
 .language-selector {
   position: relative;
-  margin: 0 1.5rem;
 }
 
 .language-icon {
@@ -477,7 +514,7 @@ a {
   right: 50%;
   transform: translateX(50%);
   background-color: var(--background-color);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border-color);
   list-style: none;
   padding: 0.5rem 0;
   opacity: 0;
@@ -498,7 +535,7 @@ a {
 }
 
 .language-dropdown li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--tag-bg-color-hover);
 }
 
 /* --- Responsive Design --- */

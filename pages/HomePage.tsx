@@ -23,13 +23,28 @@ const HomePage = () => {
             <div className="grid-item tech-stack">
                 <h3>{t('home.techStack.title')}</h3>
                 {techStackData?.proficient?.skills && (
-                    <div className="tech-skills-container">
-                        {/* FIX: Wrapped 'tech' in parentheses to make the arrow function signature more explicit and prevent potential parsing errors. */}
-                        {techStackData.proficient.skills.map((tech) => (
-                            <span key={tech} className="tech-skill-tag" data-interactive>
-                                {tech}
-                            </span>
-                        ))}
+                    <div className="tech-category">
+                        <h4 className="tech-category-title">{techStackData.proficient.title}</h4>
+                        <div className="tech-skills-container">
+                            {/* FIX: Wrapped 'tech' in parentheses to make the arrow function signature more explicit and prevent potential parsing errors. */}
+                            {techStackData.proficient.skills.map((tech) => (
+                                <span key={tech} className="tech-skill-tag" data-interactive>
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                )}
+                {techStackData?.exposure?.skills && (
+                    <div className="tech-category">
+                        <h4 className="tech-category-title">{techStackData.exposure.title}</h4>
+                        <div className="tech-skills-container">
+                            {techStackData.exposure.skills.map((tech) => (
+                                <span key={tech} className="tech-skill-tag" data-interactive>
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 )}
             </div>
