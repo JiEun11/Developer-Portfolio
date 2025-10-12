@@ -324,6 +324,10 @@ a {
   display: none; /* Hidden on desktop */
 }
 
+.project-item-details-mobile {
+    display: none; /* Hide on desktop */
+}
+
 .projects-details-container {
   display: flex;
   flex-direction: column;
@@ -357,6 +361,12 @@ a {
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
   animation-delay: 0.2s;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .project-description {
@@ -537,7 +547,7 @@ a {
   }
 
   .project-item {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   
   .project-item a {
@@ -555,6 +565,11 @@ a {
     margin: 0 auto 1rem;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+  }
+
+  .project-item-details-mobile {
+    display: block;
+    margin-top: 1rem;
   }
 
   .about-page {

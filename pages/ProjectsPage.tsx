@@ -28,6 +28,7 @@ const ProjectsPage = () => {
                                 href="#" 
                                 data-interactive
                                 className={activeProject?.id === project.id ? 'active' : ''}
+                                onClick={(e) => e.preventDefault()}
                             >
                                 <img 
                                     src={project.imageUrl} 
@@ -36,6 +37,14 @@ const ProjectsPage = () => {
                                 />
                                 <span>{t(`projects.${project.id}.name`)}</span>
                             </a>
+                            <div className="project-item-details-mobile">
+                                <p className="project-description">{t(project.descriptionKey)}</p>
+                                <div className="project-technologies">
+                                    {project.technologies.map(tech => (
+                                        <span key={tech} className="project-tech-tag">{tech}</span>
+                                    ))}
+                                </div>
+                            </div>
                         </li>
                     ))}
                 </ul>
@@ -47,6 +56,8 @@ const ProjectsPage = () => {
                 ></div>
                 {activeProject && (
                     <div className="project-details" key={activeProject.id}>
+                        {/* FIX: Corrected a typo in the template literal to properly access the `id` property of the `activeProject` object. */}
+                        <h3 className="project-title">{t(`projects.${activeProject.id}.name`)}</h3>
                         <p className="project-description">
                             {t(activeProject.descriptionKey)}
                         </p>
