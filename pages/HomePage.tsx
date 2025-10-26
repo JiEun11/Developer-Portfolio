@@ -1,22 +1,17 @@
 import React, { useState, useRef } from 'react';
 import { useIntl } from '../context/IntlContext';
-
-interface TechCategory {
-    title: string;
-    skills: string[];
-}
-
-interface TechStack {
-    proficient: TechCategory;
-    exposure: TechCategory;
-}
+import { useNavigation } from '../context/NavigationContext';
 
 const HomePage = () => {
     const { t, locale } = useIntl();
+    const { setPage } = useNavigation();
     const [isExpanded, setIsExpanded] = useState(false);
     const contentRef = useRef<HTMLDivElement>(null);
 
-    const techStackData = t('home.techStack.items') as TechStack | undefined;
+    const skills = t('home.techStack.items');
+    const proficientSkills = t('home.techStack.proficient.items');
+    const exposureSkills = t('home.techStack.exposure.items');
+
     const introTitle = t('home.title');
     const introDescriptionShort = t('home.description.short');
     const introDescriptionMore = t('home.description.more');
@@ -33,7 +28,7 @@ const HomePage = () => {
                     {introDescriptionShort && (
                         <div className="intro-description-container">
                             <p className="intro-description">{introDescriptionShort}</p>
-                            {locale === 'ko' && introDescriptionMore && (
+                            {introDescriptionMore && (
                                 <>
                                     <div 
                                         ref={contentRef}
@@ -57,29 +52,37 @@ const HomePage = () => {
             </div>
             <div className="grid-item tech-stack">
                 <h3>{t('home.techStack.title')}</h3>
-                {techStackData?.proficient?.skills && (
-                    <div className="tech-category">
-                        <h4 className="tech-category-title">{techStackData.proficient.title}</h4>
-                        <div className="tech-skills-container">
-                            {techStackData.proficient.skills.map((tech) => (
-                                <span key={tech} className="tech-skill-tag" data-interactive>
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
+                {locale === 'ko' ? (
+                     <div className="tech-skills-container">
+                        {Array.isArray(skills) && skills.map((tech: string) => (
+                            <span key={tech} className="tech-skill-tag" data-interactive>
+                                {tech}
+                            </span>
+                        ))}
                     </div>
-                )}
-                {techStackData?.exposure?.skills && (
-                    <div className="tech-category">
-                        <h4 className="tech-category-title">{techStackData.exposure.title}</h4>
-                        <div className="tech-skills-container">
-                            {techStackData.exposure.skills.map((tech) => (
-                                <span key={tech} className="tech-skill-tag" data-interactive>
-                                    {tech}
-                                </span>
-                            ))}
+                ) : (
+                    <>
+                        <div className="tech-stack-group">
+                            <h4>{t('home.techStack.proficient.title')}</h4>
+                            <div className="tech-skills-container">
+                                {Array.isArray(proficientSkills) && proficientSkills.map((tech: string) => (
+                                    <span key={tech} className="tech-skill-tag" data-interactive>
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
-                    </div>
+                         <div className="tech-stack-group">
+                            <h4>{t('home.techStack.exposure.title')}</h4>
+                            <div className="tech-skills-container">
+                                {Array.isArray(exposureSkills) && exposureSkills.map((tech: string) => (
+                                    <span key={tech} className="tech-skill-tag" data-interactive>
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </>
                 )}
             </div>
         </div>

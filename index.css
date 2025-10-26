@@ -284,7 +284,6 @@ a {
   opacity: 1;
 }
 
-
 .grid-item h3 {
   font-size: 1rem;
   font-weight: 400;
@@ -294,18 +293,21 @@ a {
   opacity: 0.7;
 }
 
-.tech-category + .tech-category {
-  margin-top: 2rem;
+.tech-stack-group {
+    margin-bottom: 2rem;
+}
+.tech-stack-group:last-child {
+    margin-bottom: 0;
+}
+.tech-stack-group h4 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    opacity: 0.7;
 }
 
-.tech-category-title {
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 1rem;
-  opacity: 0.6;
-}
 
 .tech-skills-container {
   display: flex;
@@ -354,7 +356,6 @@ a {
 .projects-list-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .projects-page h2 {
@@ -364,6 +365,25 @@ a {
   letter-spacing: 2px;
   margin-bottom: 2rem;
   opacity: 0.7;
+}
+
+.company-group {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.company-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.company-header {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    opacity: 0.9;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .projects-list {
@@ -376,12 +396,22 @@ a {
   padding: 1.5rem 0;
 }
 
-.project-item:first-child {
-  border-top: 1px solid var(--border-color);
+.projects-list > .project-item:last-child {
+    border-bottom: none;
 }
 
+.company-group .projects-list .project-item:first-child {
+    padding-top: 0.5rem;
+}
+
+.company-group .projects-list .project-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+
 .project-item a {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -414,29 +444,58 @@ a {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out, margin-top 0.6s ease-in-out;
+  transition: max-height 0.8s ease-in-out, opacity 0.6s ease-in-out, margin-top 0.6s ease-in-out;
   margin-top: 0;
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
 }
 
 .project-expanded-details.expanded {
-  max-height: 600px; /* Adjust as needed */
+  max-height: 1200px; /* Adjust as needed for more content */
   opacity: 1;
   margin-top: 1.5rem;
 }
 
 .project-expanded-image {
-  width: 50%;
-  flex-shrink: 0;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  display: none; /* Hide image as it's not used for experiences */
 }
 
 .project-expanded-text {
-  width: 50%;
-  flex-grow: 1;
+  width: 100%;
+}
+
+.experience-header {
+    margin-bottom: 1.5rem;
+}
+
+.experience-header h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.experience-header p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    line-height: 1.5;
+}
+
+.experience-header p.experience-subtitle {
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+
+.experience-description {
+    list-style-position: outside;
+    padding-left: 1.2rem; /* Indent list */
+    margin-bottom: 2rem;
+}
+
+.experience-description li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 0.75rem;
 }
 
 .project-description {
@@ -633,18 +692,14 @@ a {
     padding: 2rem 0;
   }
 
-  .projects-list {
-    text-align: center;
-  }
-
   .project-item a {
     font-size: 1.5rem;
   }
   
   .project-expanded-details {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
+    /* flex-direction: column; */
+    /* gap: 1.5rem; */
+    /* align-items: center; */
   }
 
   .project-expanded-image, .project-expanded-text {
@@ -652,11 +707,11 @@ a {
   }
 
   .project-expanded-text {
-      text-align: center;
+      text-align: left;
   }
 
   .project-technologies {
-      justify-content: center;
+      justify-content: flex-start;
   }
 
   .about-page {
