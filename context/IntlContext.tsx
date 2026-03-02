@@ -17,7 +17,7 @@ export const IntlProvider = ({ children }: { children: ReactNode }) => {
     useEffect(() => {
         const fetchMessages = async () => {
             try {
-                const response = await fetch(`./locales/${locale}.json`);
+                const response = await fetch(`${import.meta.env.BASE_URL}locales/${locale}.json`);
                 if (!response.ok) {
                     throw new Error(`Could not load ${locale}.json`);
                 }
