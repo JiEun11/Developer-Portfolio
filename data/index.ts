@@ -69,9 +69,25 @@ export const companyExperiencesData: CompanyExperience[] = [
                     "experience.goorm.aisa.desc.3_ko",
                     "experience.goorm.aisa.desc.4_ko",
                     "experience.goorm.aisa.desc.5_ko",
+                    "experience.goorm.aisa.desc.6_ko",
                 ],
                 technologies: ["React.js", "react-query", "Context-API", "Node.js", "REST API", "MongoDB", "gpt-tokenizer", "Git"]
             },
+            {
+            id: 107,
+            titleKey: "experience.goorm.renewal.title_ko",
+            roleKey: "experience.goorm.renewal.role_ko",
+            periodKey: "experience.goorm.renewal.period_ko",
+            descriptionPointsKeys: [
+                "experience.goorm.renewal.desc.1_ko",
+                "experience.goorm.renewal.desc.2_ko",
+                "experience.goorm.renewal.desc.3_ko",
+                "experience.goorm.renewal.desc.4_ko",
+                "experience.goorm.renewal.desc.5_ko",
+                "experience.goorm.renewal.desc.6_ko",
+            ],
+            technologies: ["TypeScript", "React.js", "React Query", "Context API", "Node.js", "REST API", "MongoDB", "Git"]
+        },
             {
                 id: 102,
                 titleKey: "experience.goorm.qa.title_ko",
@@ -81,6 +97,8 @@ export const companyExperiencesData: CompanyExperience[] = [
                     "experience.goorm.qa.desc.1_ko",
                     "experience.goorm.qa.desc.2_ko",
                     "experience.goorm.qa.desc.3_ko",
+                    "experience.goorm.qa.desc.4_ko",  // 신규 추가
+                    "experience.goorm.qa.desc.5_ko",
                 ],
                 technologies: ["React.js", "Node.js", "MongoDB", "Git", "Figma"]
             },
@@ -93,6 +111,7 @@ export const companyExperiencesData: CompanyExperience[] = [
                     "experience.goorm.blog.desc.1_ko",
                     "experience.goorm.blog.desc.2_ko",
                     "experience.goorm.blog.desc.3_ko",
+                    "experience.goorm.blog.desc.4_ko",
                 ],
                 technologies: ["Amazon Chime SDK", "Technical Writing"]
             },
@@ -135,6 +154,7 @@ export const companyExperiencesData: CompanyExperience[] = [
                     "experience.goorm.codepro.desc.3_ko",
                     "experience.goorm.codepro.desc.4_ko",
                     "experience.goorm.codepro.desc.5_ko",
+                    "experience.goorm.codepro.desc.6_ko",
                 ],
                 technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Git", "Elastic Search", "Figma"]
             }
@@ -168,6 +188,7 @@ export const companyExperiencesData: CompanyExperience[] = [
                     "experience.posco.ai.desc.2_ko",
                     "experience.posco.ai.desc.3_ko",
                     "experience.posco.ai.desc.4_ko",
+                     "experience.posco.ai.desc.5_ko", 
                 ],
                 technologies: ["jQuery", "Spring Boot", "Python", "Pandas", "AWS SageMaker", "Lambda", "PostgreSQL", "Git", "SVN"]
             },
