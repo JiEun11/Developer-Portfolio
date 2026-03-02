@@ -19,8 +19,9 @@ const AboutPage = () => {
                     <li>
                         {locale === 'ko' ? (
                             <a 
-                                href="/resume_ko.pdf" 
-                                download="jieun-kim-resume.pdf" 
+                                href="https://drive.google.com/file/d/16V7hJ7AP3EKjB20ceutYJEaAJwlPeZVV/view?usp=sharing" 
+                                target="_blank"  
+                                rel="noopener noreferrer"
                                 className="resume-button"
                                 data-interactive
                             >
