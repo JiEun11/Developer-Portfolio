@@ -41,54 +41,13 @@ lint, test 설정 없음.
 
 ---
 
-## Project Structure
-
-```
-Developer-Portfolio/
-├── index.tsx               # 앱 진입점 (ReactDOM.render)
-├── index.html
-├── index.css               # 전체 스타일 (단일 파일)
-├── App.tsx                 # Provider 스택 + Preloader 로직
-│
-├── context/
-│   ├── ThemeContext.tsx     # dark/light 테마, localStorage 영속
-│   ├── IntlContext.tsx      # 다국어 (en/ko/de), t() 함수 제공
-│   └── NavigationContext.tsx # 페이지 상태 + 트랜지션 플래그
-│
-├── pages/
-│   ├── HomePage.tsx        # 2-column 그리드: 소개 + 기술 스택
-│   ├── ProjectsPage.tsx    # 경력 리스트 (accordion 방식)
-│   └── AboutPage.tsx       # 프로필 사진 + 소개글 + 이력서 버튼
-│
-├── components/
-│   ├── PageTransition.tsx  # 활성 페이지 렌더링 + CSS 슬라이드 애니메이션
-│   ├── Header.tsx          # 로고 + nav (home/projects/about)
-│   ├── Footer.tsx          # 소셜 링크 + ThemeToggler + LanguageSelector
-│   ├── CustomCursor.tsx    # 네이티브 커서 대체
-│   ├── Preloader.tsx       # 앱 첫 진입 시 2.5초 로딩 화면
-│   ├── ThemeToggler.tsx    # 테마 토글 버튼
-│   ├── LanguageSelector.tsx # 언어 선택 드롭다운
-│   └── Icons.tsx           # SVG 아이콘 컴포넌트
-│
-├── data/
-│   └── index.ts            # 경력 데이터 (TypeScript 인터페이스 + 데이터 배열)
-│
-├── locales/
-│   ├── en.json             # 영어 번역
-│   ├── ko.json             # 한국어 번역
-│   └── de.json             # 독일어 번역
-│
-└── public/
-    └── resume_ko.pdf       # 한국어 이력서 PDF
-```
-
----
-
 ## Architecture
 
 ### 네비게이션 (라우터 없음)
 
 URL 라우터를 사용하지 않는다. `NavigationContext`가 `page` 문자열 상태(`'home'`, `'projects'`, `'about'`)를 관리하고, `PageTransition` 컴포넌트가 해당 페이지 컴포넌트를 렌더링하면서 CSS 슬라이드 애니메이션을 구동한다.
+
+페이지 전환 시간은 **500ms** — `NavigationContext.tsx`의 `setTimeout`과 `index.css`의 애니메이션 duration이 반드시 동기화되어야 한다.
 
 ### Provider 중첩 순서 (`App.tsx`)
 
@@ -101,8 +60,15 @@ ThemeProvider
 ### i18n 패턴
 
 - `t('키')` 로 모든 텍스트 조회. 일부 키는 배열을 반환함 (예: `home.techStack.proficient.items`).
-- 로케일 파일: `locales/{locale}.json` — 런타임에 fetch.
+- `locales/*.json`은 **flat 구조** — 중첩 객체가 아니라 도트 표기법 문자열이 JSON 키로 사용됨.  
+  (`t('home.title')` → `messages['home.title']` 직접 조회, `messages.home.title` 아님)
+- 로케일 파일: `locales/{locale}.json` — `import.meta.env.BASE_URL`을 prefix로 붙여 fetch (GitHub Pages 배포 경로 대응).
 - 기본 언어: `'en'`, fallback도 `'en'`.
+
+### 빌드 / 배포 설정 (`vite.config.ts`)
+
+- `base: '/Developer-Portfolio/'` — GitHub Pages 서브디렉토리 배포용. 변경 시 CI 배포 설정도 함께 수정 필요.
+- `viteStaticCopy` 플러그인으로 `locales/*`를 `dist/locales/`로 복사 — Vite가 `fetch()`로만 참조되는 파일을 자동 포함하지 않기 때문에 필수.
 
 ### 경력 데이터 (`data/index.ts`)
 
