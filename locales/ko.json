@@ -112,5 +112,9 @@
   "about.resumeButton": "이력서 보기",
   "language.selector.en": "영어",
   "language.selector.ko": "한국어",
-  "language.selector.de": "독일어"
+  "language.selector.de": "독일어",
+  "home.desktop.folder.about": "소개",
+  "home.desktop.folder.projects": "경력",
+  "home.desktop.folder.techstack": "기술 스택",
+  "home.desktop.folder.contact": "연락처"
 }

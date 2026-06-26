@@ -37,5 +37,9 @@
   "about.resumeButton": "Lebenslauf ansehen",
   "language.selector.en": "Englisch",
   "language.selector.ko": "Koreanisch",
-  "language.selector.de": "Deutsch"
+  "language.selector.de": "Deutsch",
+  "home.desktop.folder.about": "Über mich",
+  "home.desktop.folder.projects": "Erfahrung",
+  "home.desktop.folder.techstack": "Technologien",
+  "home.desktop.folder.contact": "Kontakt"
 }

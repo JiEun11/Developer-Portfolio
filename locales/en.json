@@ -37,5 +37,9 @@
   "about.resumeButton": "View Resume",
   "language.selector.en": "English",
   "language.selector.ko": "Korean",
-  "language.selector.de": "German"
+  "language.selector.de": "German",
+  "home.desktop.folder.about": "About Me",
+  "home.desktop.folder.projects": "Experience",
+  "home.desktop.folder.techstack": "Tech Stack",
+  "home.desktop.folder.contact": "Contact"
 }
