@@ -34,6 +34,7 @@ html, body {
   overflow: hidden; /* Hide scrollbars during transitions/loading */
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
@@ -1082,6 +1083,7 @@ body.light-theme .desktop-folder:not(.selected):not(.opening):hover {
   }
   .app-container {
     padding: 1rem;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
   }
   .home-grid {
     display: flex;
