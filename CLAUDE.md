@@ -49,6 +49,8 @@ URL 라우터를 사용하지 않는다. `NavigationContext`가 `page` 문자열
 
 페이지 전환 시간은 **500ms** — `NavigationContext.tsx`의 `setTimeout`과 `index.css`의 애니메이션 duration이 반드시 동기화되어야 한다.
 
+**페이지 상태는 URL에 반영되지 않는다** — 새로고침 시 항상 `'home'`으로 복귀. 전환 중에는 중복 네비게이션이 차단된다(`isTransitioning` guard).
+
 ### Provider 중첩 순서 (`App.tsx`)
 
 ```
@@ -59,11 +61,12 @@ ThemeProvider
 
 ### i18n 패턴
 
-- `t('키')` 로 모든 텍스트 조회. 일부 키는 배열을 반환함 (예: `home.techStack.proficient.items`).
+- `t('키')` 반환 타입은 `string | string[]` — 배열 키(예: `home.techStack.proficient.items`)는 `Array.isArray()` 검사 후 처리.
 - `locales/*.json`은 **flat 구조** — 중첩 객체가 아니라 도트 표기법 문자열이 JSON 키로 사용됨.  
   (`t('home.title')` → `messages['home.title']` 직접 조회, `messages.home.title` 아님)
 - 로케일 파일: `locales/{locale}.json` — `import.meta.env.BASE_URL`을 prefix로 붙여 fetch (GitHub Pages 배포 경로 대응).
 - 기본 언어: `'en'`, fallback도 `'en'`.
+- **로케일은 localStorage에 저장하지 않는다** — 새로고침 시 항상 `'en'`으로 초기화됨 (테마와 다름).
 
 ### 빌드 / 배포 설정 (`vite.config.ts`)
 
@@ -81,6 +84,8 @@ ThemeProvider
 
 한국어 데이터의 i18n 키는 `_ko` suffix를 가진다 (예: `"experience.goorm.company_ko"`).
 
+`companyExperiencesData`의 `technologies` 배열은 **i18n 미적용** — 로케일 키가 아닌 하드코딩된 기술명 문자열 (`["React", "TypeScript", ...]`).
+
 ### 테마 시스템
 
 - 기본값: `dark`. `localStorage`에 영속.
@@ -93,8 +98,12 @@ ThemeProvider
 
 ### 이력서
 
-- `ko` 로케일: `public/resume_ko.pdf` (로컬 파일, 직접 다운로드)
+- `ko` 로케일: `public/resume_ko.pdf` (로컬 파일, 직접 다운로드) — 파일은 반드시 `public/`에 있어야 빌드 결과물에 포함됨
 - 그 외 로케일: 외부 Google Docs URL (`AboutPage.tsx`에 하드코딩)
+
+### 프리로더
+
+`App.tsx`에 **2500ms** 지연이 하드코딩되어 있음 — `Preloader` 컴포넌트 표시 시간 조정 시 이 값을 변경.
 
 ---
 
