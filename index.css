@@ -742,11 +742,6 @@ body.light-theme {
     font-weight: 300;
     line-height: 1.7;
     color: var(--greeting-color);
-    /* Clamp at two lines on smaller screens */
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
     text-wrap: balance;
 }
 
@@ -1051,7 +1046,6 @@ body.light-theme .desktop-folder:not(.selected):not(.opening):hover {
 
     .desktop-greeting-text {
         font-size: 0.8rem;
-        -webkit-line-clamp: 4;
     }
 
     .desktop-modal {
