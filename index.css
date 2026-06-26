@@ -1039,6 +1039,14 @@ body.light-theme .desktop-folder:not(.selected):not(.opening):hover {
    ============================================================ */
 
 @media (max-width: 480px) {
+    .macos-desktop {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+        justify-content: flex-start;
+        padding: 2rem 1rem;
+    }
+
     .desktop-folder-grid {
         grid-template-columns: repeat(2, 88px);
         gap: 1.5rem 2rem;
@@ -1054,6 +1062,12 @@ body.light-theme .desktop-folder:not(.selected):not(.opening):hover {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+    .macos-desktop {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+    }
+
     .desktop-folder-grid {
         grid-template-columns: repeat(3, 88px);
     }
