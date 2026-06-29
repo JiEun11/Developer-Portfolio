@@ -59,6 +59,21 @@ export const companyExperiencesData: CompanyExperience[] = [
         companyKey: "experience.goorm.company_ko",
         projects: [
             {
+                id: 108,
+                titleKey: "experience.goorm.leaderboard.title_ko",
+                roleKey: "experience.goorm.leaderboard.role_ko",
+                periodKey: "experience.goorm.leaderboard.period_ko",
+                descriptionPointsKeys: [
+                    "experience.goorm.leaderboard.desc.1_ko",
+                    "experience.goorm.leaderboard.desc.2_ko",
+                    "experience.goorm.leaderboard.desc.3_ko",
+                    "experience.goorm.leaderboard.desc.4_ko",
+                    "experience.goorm.leaderboard.desc.5_ko",
+                    "experience.goorm.leaderboard.desc.6_ko",
+                ],
+                technologies: ["React.js", "TypeScript", "EJS", "React Query", "React Router", "vapor-ui/core", "Node.js", "MongoDB", "Git"]
+            },
+            {
                 id: 101,
                 titleKey: "experience.goorm.aisa.title_ko",
                 roleKey: "experience.goorm.aisa.role_ko",
